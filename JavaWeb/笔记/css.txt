@@ -1,0 +1,109 @@
+1. 概念： Cascading Style Sheets 层叠样式表
+    * 层叠：多个样式可以作用在同一个html的元素上，同时生效
+
+2. 好处：
+    1. 功能强大
+    2. 将内容展示和样式控制分离
+        * 降低耦合度，解耦
+        * 让分工协作更容易
+        * 提高开发效率
+
+3. CSS的使用：CSS与html结合方式
+    1. 内联样式
+         * 在标签内使用style属性指定css代码
+         * 如：<div style="color:red;">hello css</div>
+    2. 内部样式
+        * 在head标签内，定义style标签，style标签的标签体内容就是css代码
+        * 如：
+            <style>
+                div{
+                    color:blue;
+                }
+            </style>
+
+            <div>hello css</div>
+    3. 外部样式
+        (1). 定义css资源文件
+        (2). 在head标签内，定义link标签，引入外部的资源文件
+        * 如：
+            * a.css文件：
+                div{
+                    color:green;
+                }
+            html文件：
+                <link rel="stylesheet" href="a.css">
+                <div>hello css</div>
+    * 注意：
+        * 1方式不常用，后期常用2,3
+        * 外部样式还可以写为：
+            <style>
+                @import "a.css";
+            </style>
+
+4. css语法：
+    * 格式：
+        选择器 {
+            属性名1:属性值1;
+            属性名2:属性值2;
+            ...
+        }
+
+5. 选择器：筛选具有相似特征的元素
+    * 分类：
+        1. 基础选择器
+            1. id选择器：选择具体的id属性值的元素，建议在一个html页面中id值唯一
+                * 语法：#id属性值{}
+            2. 元素选择器：选择具有相同标签名称的元素
+                * 语法： 标签名称{}
+            3. 类选择器：选择具有相同的class属性值的元素。
+                * 语法：.class属性值{}
+        2. 扩展选择器：
+            1. 选择所有元素：
+                * 语法： *{}
+            2. 并集选择器：
+                * 选择器1,选择器2{}
+            3. 子选择器：
+                * 语法： 选择器1 选择器2{}
+                * 如：div p {} 就是选择div标签的子标签p
+            4. 父选择器：
+                * 语法： 选择器1 > 选择器2{}
+                * 如：div > p {} 就是选择具有子标签p的div标签
+            5. 属性选择器：
+                * 语法： 标签名[属性名="属性值"]{}
+                * 如：input[type="text"] {} 就是选择属性type="text"的input标签
+            6. 伪类选择器：
+                * 语法： 标签名:状态{}
+                * 如： <a>标签(超链接标签)
+                        * 状态：
+                            * link：初始化的状态
+                            * visited：被访问过的状态
+                            * active：正在访问状态
+                            * hover：鼠标悬浮状态
+                        a:link{} 筛选处于初始化的状态的a标签
+
+6. 属性
+    1. 字体、文本
+        * font-size：字体大小
+        * color：文本颜色
+        * text-align：对其方式
+        * line-height：行高
+    2. 背景
+        * background：复合属性
+    3. 边框
+        * border：复合属性
+    4. 尺寸
+        * width：宽度
+        * height：高度
+
+参考： 1.CSS属性.html
+
+    5. 盒子模型：控制布局
+        * margin：外边距
+        * padding：内边距
+            * 默认情况下内边距会影响整个盒子的大小
+            * 设置盒子的属性，让width和height就是最终盒子的大小 -> box-sizing: border-box;
+        * float：浮动，将多个盒子放在一行显示
+            * left
+            * right
+
+参考： 2.CSS注册页面

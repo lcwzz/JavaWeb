@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<users>
+    <user id='001'>
+        <name id='10'>
+            <first_name>mike</first_name>
+            <last_name>john</last_name>
+        </name>
+        <age>23</age>
+        <gender>male</gender>
+        <br/>
+    </user>
+
+    <user id='002'>
+        <name>tom</name>
+        <age>24</age>
+        <gender>female</gender>
+    </user>
+</users>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+</head>
+<body>
+    <img src="img/banner_1.jpg" id="img" width="100%">
+
+    <script>
+        var num = 1;
+        function changePic() {
+            num++;
+            if (num > 3) {
+                num = 1;
+            }
+            var img = document.getElementById("img");
+            img.src = "img/banner_" + num + ".jpg";
+        }
+        //两秒切换一次
+        setInterval(changePic,2000);
+    </script>
+
+</body>
+</html>

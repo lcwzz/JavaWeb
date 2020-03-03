@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //绑定单击事件
+        window.onload = function () {
+            var img = document.getElementById("img");
+            img.onclick = change;
+
+            var link = document.getElementById("link");
+            link.onclick = change;
+
+            function change() {
+                var time = new Date().getTime();
+                img.src = "/regist/checkCodeServlet?" + time; //加参数不让浏览器访问缓存
+            }
+        }
+    </script>
+</head>
+<body>
+    <img id="img" src="/regist/checkCodeServlet">
+    <a id="link" href="">看不清？换一张</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电灯开关</title>
+</head>
+<body>
+
+    <img src="img/off.gif" id = "light">
+
+    <script>
+        //获取对象
+        var light = document.getElementById("light");
+        //灯状态的标记
+        var isON = false;
+        //绑定事件（用匿名函数）
+        light.onclick = function () {
+            if (isON) {
+                light.src = "img/off.gif";
+                isON = false;
+            } else {
+                light.src = "img/on.gif";
+                isON = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
